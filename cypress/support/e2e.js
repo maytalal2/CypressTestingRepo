@@ -14,4 +14,11 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+import "./commands";
+beforeEach(() => {
+  cy.log(" Visit the base URL before each test ");
+  cy.visit("/");
+});
+after(() => {
+  cy.log("End of the Testing ");
+});
